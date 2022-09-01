@@ -1,6 +1,7 @@
 import com.google.common.annotations.VisibleForTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.Random;
 
@@ -11,6 +12,7 @@ public class PracticeFormPage extends BasePage{
     private final By lastNameLocator =By.id("lastName");
     private final By emailLocator =By.id("userEmail");
     private final By mobileNumberLocator=By.id("userNumber");
+    private final By subjectsLocator=By.id("subjectsContainer");
     private int randomNumber;
     private String rd[]=new String[10];
 

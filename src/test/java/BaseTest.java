@@ -2,6 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.time.Duration;
 
@@ -25,6 +26,18 @@ public class BaseTest {
     public void afterMethod()
     {
         driver.quit();
+    }
+
+    public void scrollDown()
+    {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollBy(0,200)");
+
+    }
+    public void scrollUp()
+    {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollBy(0,-300)");
     }
 
 }
